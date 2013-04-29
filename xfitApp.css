@@ -1,0 +1,32 @@
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+img.avatarPicture {
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px black;
+  height: 100%;
+}
+
+.avatarPicture-container {
+  position: relative;
+  height: 150px;
+}
+
+.statusText {
+  position: absolute;
+  bottom: -7px;
+  left: 10px;
+}
+
+.statusText span {
+     background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 6px; 
+   border-radius: 10px;
+}
+
+.isAdmin {
+  color: #CDD7FE;
+  text-shadow: 1px 1px 1px #3A4F9C;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+</head>
+<body>
+  
+  <header>
+    <h2>Channing's Xfit Tracker</h2>    
+  </header>
+
+  <script type="text/x-handlebars">
+  {{#if name}}
+  <div class="avatarPicture-container">
+    <img class="avatarPicture" {{bindAttr src="avatarPicture"}} >
+    <h4 {{bindAttr class=":statusText isAdmin:isAdmin"}} ><span>{{status}}</span></h4>
+  </div>
+    
+    Ahoy there, {{name}}!
+  {{else}}
+    Log in, meng.
+  {{/if}}
+  </script>
+  
+<!--   <footer>
+    &copy; channing, inc.
+  </footer> -->
+  
+  <script type="text/x-handlebars" data-template-name="exercises">
+  <h3>Exercises</h3>
+  {{#each exercises}}
+    <li><strong>{{name}}</strong></li>
+  {{else}}
+    No exercises to display.  Add some!  
+  {{/each}}  
+  
+  {{#with xfit}}
+    {{name}}'s just using the #with helper for shits.<br>
+    <strong>Like a boss.</strong>
+  {{/with}}  
+    
+  </script>
+  
+  
+</body>
+</html>
